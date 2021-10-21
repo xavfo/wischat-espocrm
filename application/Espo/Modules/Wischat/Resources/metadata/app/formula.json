@@ -1,0 +1,9 @@
+{
+    "functionList": [
+	"__APPEND__",
+        {
+           "name": "string\\sendwhatsapp",
+            "insertText": "string\\sendwhatsapp(TELEFONO, TEXT, TOKEN, UID, ATTACHMENTSIDS, ATTACHMENTSNAMES)"
+        }
+		]
+}

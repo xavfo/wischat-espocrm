@@ -1,0 +1,28 @@
+{
+    "fields": {
+        "tokenwhatsapp": {
+            "type": "varchar",
+            "required": false,
+            "trim": true,
+            "audited": false,
+            "readOnly": false,
+            "tooltip": false
+        },
+        "whatsapp": {
+            "type": "varchar",
+            "required": false,
+            "trim": true,
+            "audited": false,
+            "readOnly": false,
+            "tooltip": false
+        },
+		"whatsappPersonal": {
+            "type": "varchar",
+            "maxLength": 20,
+            "trim": true,
+            "options": []
+        }
+
+
+    }
+}

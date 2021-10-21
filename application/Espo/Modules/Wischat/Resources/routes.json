@@ -1,0 +1,10 @@
+[
+    {
+        "route": "WischatMatchingConfiguration",
+        "method": "put",
+        "params": {
+            "controller": "WischatMatchingConfiguration",
+            "action": "update"
+        }
+    }
+]

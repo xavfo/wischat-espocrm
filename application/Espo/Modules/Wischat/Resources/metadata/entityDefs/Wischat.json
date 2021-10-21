@@ -1,0 +1,201 @@
+{
+    "fields": {
+        "name": {
+            "type": "varchar",
+            "required": false,
+            "trim": true
+        },
+        "description": {
+            "type": "text",
+            "required": false,
+            "seeMoreDisabled": false,
+            "readOnly": false,
+            "tooltip": false
+        },
+        "createdAt": {
+            "type": "datetime",
+            "readOnly": true
+        },
+        "modifiedAt": {
+            "type": "datetime",
+            "readOnly": true
+        },
+        "createdBy": {
+            "type": "link",
+            "readOnly": true,
+            "view": "views/fields/user"
+        },
+        "modifiedBy": {
+            "type": "link",
+            "readOnly": true,
+            "view": "views/fields/user"
+        },
+        "assignedUser": {
+            "type": "link",
+            "required": false,
+            "view": "views/fields/assigned-user"
+        },
+        "teams": {
+            "type": "linkMultiple",
+            "view": "views/fields/teams"
+        },
+        "direccion": {
+            "type": "varchar",
+            "required": false,
+            "trim": true,
+            "default": "o",
+            "maxLength": 1,
+            "audited": false,
+            "readOnly": false,
+            "tooltip": false
+        },
+        "idwhatsapp": {
+            "type": "varchar",
+            "required": false,
+            "trim": true,
+            "maxLength": 60,
+            "audited": false,
+            "readOnly": false,
+            "tooltip": false
+        },
+		"sender": {
+            "type": "varchar",
+            "required": false,
+            "trim": true,
+            "maxLength": 60,
+            "audited": false,
+            "readOnly": false,
+            "tooltip": false
+        },
+		"from": {
+            "type": "varchar",
+            "required": false,
+            "trim": true,
+            "maxLength": 60,
+            "audited": false,
+            "readOnly": false,
+            "tooltip": false
+        },
+		"to": {
+            "type": "varchar",
+            "required": false,
+            "trim": true,
+            "maxLength": 60,
+            "audited": false,
+            "readOnly": false,
+            "tooltip": false
+        },
+        "multimedia": {
+            "layoutListDisabled": true,
+            "type": "attachmentMultiple",
+            "required": false,
+            "sourceList": [],
+            "tooltip": false
+        },
+		 "nombreDelContacto": {
+            "type": "varchar",
+            "required": false,
+            "trim": true,
+            "audited": false,
+            "readOnly": false,
+            "tooltip": false
+        },
+        "respuesta": {
+            "type": "varchar",
+            "required": false,
+            "trim": true,
+            "audited": false,
+            "readOnly": false,
+            "tooltip": false
+        },
+        "tipo": {
+            "type": "varchar",
+            "required": false,
+            "trim": true,
+            "maxLength": 50,
+            "audited": false,
+            "readOnly": false,
+            "tooltip": false
+        },
+		"gruposWhatsapp": {
+            "type": "link"
+        },
+        "contactType": {
+            "type": "varchar",
+            "maxLength": 20,
+            "trim": true,
+            "options": []
+        },
+        "lead": {
+            "type": "link"
+        }
+    },
+	 "links": {
+	    "gruposWhatsapp": {
+            "type": "belongsTo",
+            "foreign": "wischats",
+            "entity": "GruposWhatsapp",
+            "audited": false
+        }, 
+        "parent": {
+            "type": "belongsToParent"
+        },
+        "createdBy": {
+            "type": "belongsTo",
+            "entity": "User"
+        },
+        "modifiedBy": {
+            "type": "belongsTo",
+            "entity": "User"
+        },
+        "assignedUser": {
+            "type": "belongsTo",
+            "entity": "User"
+        },
+        "teams": {
+            "type": "hasMany",
+            "entity": "Team",
+            "relationName": "EntityTeam",
+            "layoutRelationshipsDisabled": true
+        },
+        "multimedia": {
+            "type": "hasChildren",
+            "entity": "Attachment",
+            "foreign": "parent",
+            "layoutRelationshipsDisabled": true,
+            "relationName": "attachments"
+        },
+        "lead": {
+            "type": "belongsTo",
+            "foreign": "wischats",
+            "entity": "Lead",
+            "audited": false
+        }
+    },
+    "collection": {
+        "sortBy": "createdAt",
+        "asc": false,
+        "textFilterFields": [
+            "name"
+        ],
+        "fullTextSearch": false
+    },
+    "indexes": {
+		 "assignedUser": {
+            "columns": [
+                "assignedUserId",
+                "deleted"
+            ]
+        },
+        "assignedUserStatus": {
+            "columns": [
+                "assignedUserId"
+            ]
+        },
+		"idWhatsapp": {
+            "columns": [
+                "idwhatsapp"
+            ]
+        }
+    }
+}

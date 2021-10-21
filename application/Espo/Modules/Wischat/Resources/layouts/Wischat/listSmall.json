@@ -1,0 +1,25 @@
+[
+    {
+        "name": "createdAt",
+        "width": 15,
+        "align": "left"
+    },
+    {
+        "name": "direccion",
+        "width": 5,
+        "align": "left"
+    },
+    {
+        "name": "tipo",
+        "width": 10,
+        "align": "left"
+    },
+    {
+        "name": "description"
+    },
+    {
+        "name": "respuesta",
+        "width": 10,
+        "align": "left"
+    }
+]

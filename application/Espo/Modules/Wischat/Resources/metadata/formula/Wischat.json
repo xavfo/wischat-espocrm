@@ -1,0 +1,3 @@
+{
+     "beforeSaveCustomScript": "ifThenElse(direccion=='o',respuesta = string\\sendwhatsapp(string\\concatenate(lead.whatsapp), description, assignedUser.tokenwhatsapp, assignedUser.whatsapp, multimediaIds, multimediaNames));"
+}

@@ -1,0 +1,25 @@
+[
+    {
+        "name": "name",
+        "link": true
+    },
+    {
+        "name": "lead"
+    },
+    {
+        "name": "grupoWhatsapp"
+    },
+    {
+        "name": "wischats",
+        "notSortable": true
+    },
+    {
+        "name": "modifiedAt"
+    },
+    {
+        "name": "modifiedBy"
+    },
+    {
+        "name": "assignedUser"
+    }
+]

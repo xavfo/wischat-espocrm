@@ -1,0 +1,36 @@
+{
+  "fields": {
+    "parent": "Henviser til",
+    "dateStart": "Startdato",
+    "dateEnd": "Slutdato",
+    "duration": "Varighed",
+    "status": "Status",
+    "reminders": "Underretninger"
+  },
+  "links": {
+    "parent": "Henviser til"
+  },
+  "options": {
+    "status": {
+      "Planned": "Planlagt",
+      "Held": "Gennemført",
+      "Not Held": "Ikke Gennemført"
+    }
+  },
+  "labels": {
+    "Create Whatsapp": "Opret Whatsapp",
+    "Schedule Whatsapp": "Planlæg Whatsapp",
+    "Log Whatsapp": "Log Whatsapp",
+    "Set Held": "Marker som Gennemført",
+    "Set Not Held": "Marker som Ikke Gennemført"
+  },
+  "massActions": {
+    "setHeld": "Marker som Gennemført",
+    "setNotHeld": "Marker som Ikke Gennemført"
+  },
+  "presetFilters": {
+    "planned": "Planlagt",
+    "held": "Gennemført",
+    "todays": "Dagens"
+  }
+}

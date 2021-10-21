@@ -1,0 +1,35 @@
+[
+    {
+        "name": "name",
+        "link": true
+    },
+    {
+        "name": "direccion",
+        "width": 5,
+        "align": "left"
+    },
+    {
+        "name": "lead"
+    },
+    {
+        "name": "tipo",
+        "width": 10,
+        "align": "left"
+    },
+    {
+        "name": "description",
+        "link": true,
+        "align": "left"
+    },
+    {
+        "name": "assignedUser"
+    },
+    {
+        "name": "createdAt",
+        "width": 10,
+        "align": "left"
+    },
+    {
+        "name": "respuesta"
+    }
+]

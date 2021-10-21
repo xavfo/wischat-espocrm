@@ -1,0 +1,58 @@
+{
+    "fields": {
+        "wischats": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": true,
+            "layoutListDisabled": true,
+            "layoutMassUpdateDisabled": true,
+            "noLoad": true,
+            "importDisabled": true
+        },
+        "whatsapp": {
+            "type": "varchar",
+            "required": false,
+            "trim": true,
+            "tooltipText": "numero de teléfono de whatsapp con cod pais Ej. 593987654321",
+            "audited": false,
+            "readOnly": false,
+            "tooltip": true
+        },
+		    "gruposWhatsapp": {
+            "type": "linkOne"
+        },
+        "grupoAtencion": {
+            "type": "varchar",
+            "maxLength": 30,
+            "trim": true,
+            "options": []
+        },
+        "grupoId": {
+            "type": "varchar",
+            "maxLength": 30,
+            "trim": true,
+            "options": []
+        },
+        "menuid": {
+            "type": "varchar",
+            "maxLength": 150,
+            "default": "0",
+            "options": []
+        }
+    },
+    "links": {
+        "wischats": {
+            "type": "hasMany",
+            "foreign": "lead",
+            "entity": "Wischat",
+            "audited": false,
+            "isCustom": true
+        },
+        "gruposWhatsapp": {
+            "type": "hasOne",
+            "foreign": "lead",
+            "entity": "GruposWhatsapp",
+            "isCustom": true
+        }
+
+    }
+}
