@@ -38,6 +38,7 @@ class SendwhatsappType extends \Espo\Core\Formula\Functions\Base
 $http=isset($_SERVER['HTTPS']) ? 'https://' : 'http://';
 //$part= rtrim($_SERVER['SCRIPT_NAME'],basename($_SERVER['SCRIPT_NAME']));
 $domain=$_SERVER['SERVER_NAME'] . dirname($_SERVER['REQUEST_URI']);
+$domain=str_replace("/api/v1","",$domain);
 $url_path = "$http"."$domain";
 
 foreach ($attachmentsnames as $clave => $valor) {
