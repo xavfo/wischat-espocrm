@@ -1,9 +1,0 @@
-{
-    "controller": "controllers/record",
-    "boolFilterList": [
-        "onlyMy"
-    ],
-    "kanbanViewMode": false,
-    "color": null,
-	"iconClass": "far fa-comments"
-}

@@ -1,0 +1,32 @@
+[
+    {
+        "rows": [
+            [
+                {
+                    "name": "name"
+                },
+                {
+                    "name": "codigo"
+                }
+            ],
+            [
+                {
+                    "name": "description"
+                },
+                {
+                    "name": "grupoWhatsapp"
+                }
+            ],
+            [
+                {
+                    "name": "lead"
+                },
+                {
+                    "name": "idwhatsapp"
+                }
+            ]
+        ],
+        "style": "default",
+        "label": "Overview"
+    }
+]

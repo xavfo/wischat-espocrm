@@ -1,9 +1,0 @@
-{
-    "controller":"wischat:controllers/wischat-request",
-    "dynamicHandler":"wischat:request-dynamic-handler",
-    "boolFilterList":[
-        "onlyMy"
-    ],
-    "iconClass":"far fa-dot-circle",
-    "color":"#eaa0a0"
-}

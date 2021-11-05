@@ -1,0 +1,13 @@
+{
+    "wischat": {
+        "label": "Wischat",
+        "items":[
+            {
+                "url": "#WischatRequest/settings",
+                "label": "Settings",
+                "description": "Wischat Settings",
+                "iconClass": "fas fa-comment"
+            }
+        ]
+    }
+}

@@ -1,0 +1,61 @@
+[
+    {
+        "rows": [
+            [
+                {
+                    "name": "description"
+                }
+            ],
+            [
+                {
+                    "name": "multimedia"
+                }
+            ],
+            [
+                {
+                    "name": "respuesta"
+                },
+                {
+                    "name": "idwhatsapp"
+                }
+            ],
+            [
+                {
+                    "name": "direccion"
+                },
+                {
+                    "name": "lead"
+                }
+            ],
+            [
+                {
+                    "name": "name"
+                },
+                {
+                    "name": "nombreDelContacto"
+                }
+            ],
+            [
+                {
+                    "name": "tipo"
+                },
+                {
+                    "name": "contactType"
+                }
+            ],
+            [
+                {
+                    "name": "sender"
+                },
+                {
+                    "name": "from"
+                },
+                {
+                    "name": "to"
+                }
+            ]
+        ],
+        "style": "default",
+        "label": "General"
+    }
+]

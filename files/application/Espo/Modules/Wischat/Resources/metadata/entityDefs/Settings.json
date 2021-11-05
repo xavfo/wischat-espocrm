@@ -1,0 +1,12 @@
+{
+    "fields": {
+        "wischatApiKey": {
+            "type": "varchar",
+            "min": 0
+        },
+        "wischatSecretKey": {
+            "type": "varchar",
+            "min": 0
+        }
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "labels": {
+        "Create GruposWhatsapp": "Crear Grupo Whatsapp"
+    },
+    "fields": {
+        "codigo": "Código",
+        "grupoWhatsapp": "Grupo Whatsapp",
+        "idwhatsapp": "Idwhatsapp",
+        "whatsapps": "Whatsapps",
+        "lead": "Referencia"
+    },
+    "links": {
+        "whatsapps": "Whatsapps",
+        "lead": "Referencia"
+    }
+}
