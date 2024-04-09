@@ -83,7 +83,7 @@ if ($_POST['message']['type']!='ACK') {
     else {
         $direccion = 'i';
     }
-$lead = $client->request('GET', 'Lead?where[0][type]=equals&where[0][field]=deleted&where[0][value]=0&where[1][type]=equals&where[1][field]=whatsapp&where[1][value]='.trim($_POST['message']['cuid']));
+$lead = $client->request('GET', 'Contact?where[0][type]=equals&where[0][field]=deleted&where[0][value]=0&where[1][type]=equals&where[1][field]=whatsapp&where[1][value]='.trim($_POST['message']['cuid']));
 // Validar si existe Lead con éste número
 if($lead['total']>=1){
         $log =  "existe ".$lead['list'][0]['name'];
@@ -93,14 +93,14 @@ if($lead['total']>=1){
         $leadName = $lead['list'][0]['name'];
 } else {
     //Buscar si alguien tiene el mismo número de teléfono
-    $phone_lead = $client->request('GET', 'Lead?where[0][type]=equals&where[0][field]=deleted&where[0][value]=0&where[1][type]=equals&where[1][field]=phoneNumber&where[1][value]=0'.trim(substr($_POST['contact']['uid'],-9)));
+    $phone_lead = $client->request('GET', 'Contact?where[0][type]=equals&where[0][field]=deleted&where[0][value]=0&where[1][type]=equals&where[1][field]=phoneNumber&where[1][value]=0'.trim(substr($_POST['contact']['uid'],-9)));
 // Actualizar el número de WhatsApp en el campo
     if($phone_lead['total']>=1){
                 $leadName = $_POST['contact']['name'];
                 $assignedUserId = $phone_lead['list'][0]['assignedUserId'];
                 $id_lead = $phone_lead['list'][0]['id'];
                 echo "Actualizando Numero de Whatsapp";
-                $response = $client->request('PATCH', 'Lead/'.$phone_lead['list'][0]['id'], ['whatsapp' => trim($_POST['message']['cuid'])]);
+                $response = $client->request('PATCH', 'Contact/'.$phone_lead['list'][0]['id'], ['whatsapp' => trim($_POST['message']['cuid'])]);
 
 } else {
         $leadName = $_POST['contact']['name'];
@@ -111,7 +111,7 @@ if($lead['total']>=1){
             if ($direccion != 'i') {
            $leadName = $_POST['message']['cuid'];
         }
-            $client->request('POST', 'Lead', [
+            $client->request('POST', 'Contact', [
             'firstName' => $leadName,
             'name' => $leadName,
             'whatsapp' => $_POST['message']['cuid'],
@@ -148,11 +148,11 @@ $assignedUserId = $lead['list'][0]['assignedUserId'];
 
 // Asociar Lead con WA
 $client->request('POST', 'Wischat', [
-    'name' => $leadName.' - Lead',
+    'name' => $leadName.' - Paciente',
     'description' => $_POST['message']['body']['text'],
     'direccion' => $direccion,
     'tipo' => $_POST['message']['type'],
-    'leadId' => $id_lead,
+    'pacienteId' => $id_lead,
     'assignedUserId' => $assignedUserId,
     'idwhatsapp' => $idwhatsapp,
     'respuesta' => 'lead '.$_POST['message']['uid'],
