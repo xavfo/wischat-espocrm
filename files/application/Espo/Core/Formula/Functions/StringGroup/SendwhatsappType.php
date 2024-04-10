@@ -25,8 +25,8 @@ class SendwhatsappType extends \Espo\Core\Formula\Functions\Base
         CURLOPT_CONNECTTIMEOUT => 120,      // timeout on connect
         CURLOPT_TIMEOUT        => 120,      // timeout on response
         CURLOPT_MAXREDIRS      => 10,       // stop after 10 redirects
-                CURLOPT_HTTPAUTH       => true,
-                CURLAUTH_ANY           => true,
+        //        CURLOPT_HTTPAUTH       => true,
+        //        CURLAUTH_ANY           => true,
          );
 
        if (count($item->value) > 4) {
